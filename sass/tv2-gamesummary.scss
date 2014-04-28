@@ -103,6 +103,24 @@
     //compact view
     .compact{
 
+        li.video{
+            cursor: pointer;
+        }
+
+        .videotoggle:before{
+            -webkit-font-smoothing: antialiased;
+            display: inline;
+            font-family: tv2-icons-story;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            height: auto;
+            speak: none;
+            text-transform: none;
+            width: auto;
+            content:'\e000';
+        }
+
         .event.plain{
            padding-top: 0;
         }
@@ -111,7 +129,7 @@
         time{
            font-size: 20px !important;
         }
-        .fb-share,.eventimg, .event figure, .event p{
+        .fb-share,.eventimg, .event figure, .event > p{
             display: none; 
         }
 
@@ -120,6 +138,11 @@
                 width: 100%;
             }
         }
+
+        figure{
+            width: 50%;
+        }
+
         h3,
         strong{
             display: inline-block;

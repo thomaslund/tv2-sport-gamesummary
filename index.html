@@ -17,7 +17,7 @@
 
 <!-- start module markup --> 
 
-		 	<section class="sportsdata-widget module-gamesummary bg-blue-light">
+		 	<section class="sportsdata-widget module-gamesummary bg-white">
 
 			 	<div style="padding: 15px;">
 			 		<button style="float: right;" type="button">Vis høydepunkter</button>
@@ -44,7 +44,7 @@
 			 			</div>
 			 		</li>
 
-			 		<li class="highlight">
+			 		<li class="highlight video">
 			 			<time class="t23 font-condensed" datetime="2014-12-23 18:43">43.</time>
 			 			<div class="event">
 
@@ -61,7 +61,7 @@
 
 			 				<h3 class="font-extrabold t40">
 					    		<img src="img/icon-goal.svg" alt="Mål" title="Mål">
-					    		Mål: 1-0
+					    		<span class="videotoggle">Mål: 1-0</span>
 					    	</h3>
 			 				<strong class="t23 font-extrabold">Galileo Galilei (Astronomers)</strong>
 			 				<p>We haz science!</p>
@@ -215,6 +215,8 @@
 			//toggle compact class to show highlights
 			$('body').on('click', '.module-gamesummary button', function(){
 				$(this).toggleClass('active').parents('.module-gamesummary').find('ul').toggleClass('compact');
+			}).on('click', '.module-gamesummary .compact li.video', function(){
+				$(this).find('figure').show();
 			});
 
 
