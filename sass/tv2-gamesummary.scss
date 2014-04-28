@@ -1,0 +1,163 @@
+%clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+%focus{
+	&:focus{
+		background-color: #b4e7fc;
+	};
+}
+
+.module-gamesummary{
+    ul{
+        padding: 0;
+    }
+	ul, li{
+        list-style: none;
+    }
+
+    p{
+        margin-bottom: 0.5em;
+    }
+
+    li{
+        padding: 15px 0;
+        width: 100%;
+        display: table;
+        border-bottom: 1px solid rgba(0,0,0, 0.25);
+
+
+        &.highlight{
+            background-color: rgba(0,0,0,0.15);
+        }
+
+
+        .fb-share{
+            @extend %clearfix;
+
+        }
+    }
+    time, .multiple-events, li > .event{
+        display: table-cell;
+        vertical-align: top;
+    }
+    time{
+        width: 3em;
+        text-align: right;
+    }
+    time, .event, .eventimg, figure.video{
+        padding-right: 15px;
+    }
+
+    figure.video{
+        width: 33%;
+        float: left;
+    }
+    .eventimg{
+        float: left;
+        width: 120px;
+        max-width: 33%;
+    }
+
+    .font-extrabold{
+        font-family: 'flama_semi_condensed', 'flama', sans-serif;
+        font-weight: 900;
+    }
+    strong > img,
+    h3 > img{
+        height: 0.75em;
+        display: inline-block;
+        //float: left;
+        
+    }
+
+    .article-figure{
+        margin-bottom: 0;
+    }
+
+    .event.plain{
+       padding-top: 0.15em;
+    }
+
+
+    //temp togglebutton
+    button{
+        background-color:  rgba(0,0,0,0.25);
+    }
+    button.active{
+        -webkit-transform: translate(2px, 2px);
+        background-color: rgba(0,0,0,0.5);
+        box-shadow: none;
+    }
+
+
+    //compact view
+    .compact{
+
+        .event.plain{
+           padding-top: 0;
+        }
+
+        span,
+        time{
+           font-size: 20px !important;
+        }
+        .fb-share,.eventimg, .event figure, .event p{
+            display: none; 
+        }
+
+        .multiple-events{
+            .c4{
+                width: 100%;
+            }
+        }
+        h3,
+        strong{
+            display: inline-block;
+            font-size: 20px !important;
+        }
+
+        strong > img,
+        h3 > img{
+            padding-right: 15px;
+        }
+
+        .event.plain{
+            padding-left: 35px;
+        }
+    }
+
+
+    //responsive rules
+    &.tiny,
+    &.narrow{
+        figure.video{
+            width: 100%;
+        }
+        .multiple-events .eventimg{
+            display: none;
+        }
+        .event.plain{
+           padding-top: 0em;
+        }
+    }
+
+    &.tiny{
+        .eventimg{
+            display: none;
+        }
+
+        .c4{
+            width: 100%;
+        }
+    }
+}

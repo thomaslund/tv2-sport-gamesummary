@@ -1,0 +1,145 @@
+/* line 1, ../sass/tv2-gamesummary.scss */
+.module-gamesummary li .fb-share {
+  zoom: 1;
+}
+/* line 3, ../sass/tv2-gamesummary.scss */
+.module-gamesummary li .fb-share:before, .module-gamesummary li .fb-share:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+/* line 9, ../sass/tv2-gamesummary.scss */
+.module-gamesummary li .fb-share:after {
+  clear: both;
+}
+
+/* line 21, ../sass/tv2-gamesummary.scss */
+.module-gamesummary ul {
+  padding: 0;
+}
+/* line 24, ../sass/tv2-gamesummary.scss */
+.module-gamesummary ul, .module-gamesummary li {
+  list-style: none;
+}
+/* line 28, ../sass/tv2-gamesummary.scss */
+.module-gamesummary p {
+  margin-bottom: 0.5em;
+}
+/* line 32, ../sass/tv2-gamesummary.scss */
+.module-gamesummary li {
+  padding: 15px 0;
+  width: 100%;
+  display: table;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+/* line 39, ../sass/tv2-gamesummary.scss */
+.module-gamesummary li.highlight {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+/* line 49, ../sass/tv2-gamesummary.scss */
+.module-gamesummary time, .module-gamesummary .multiple-events, .module-gamesummary li > .event {
+  display: table-cell;
+  vertical-align: top;
+}
+/* line 53, ../sass/tv2-gamesummary.scss */
+.module-gamesummary time {
+  width: 3em;
+  text-align: right;
+}
+/* line 57, ../sass/tv2-gamesummary.scss */
+.module-gamesummary time, .module-gamesummary .event, .module-gamesummary .eventimg, .module-gamesummary figure.video {
+  padding-right: 15px;
+}
+/* line 61, ../sass/tv2-gamesummary.scss */
+.module-gamesummary figure.video {
+  width: 33%;
+  float: left;
+}
+/* line 65, ../sass/tv2-gamesummary.scss */
+.module-gamesummary .eventimg {
+  float: left;
+  width: 120px;
+  max-width: 33%;
+}
+/* line 71, ../sass/tv2-gamesummary.scss */
+.module-gamesummary .font-extrabold {
+  font-family: 'flama_semi_condensed', 'flama', sans-serif;
+  font-weight: 900;
+}
+/* line 76, ../sass/tv2-gamesummary.scss */
+.module-gamesummary strong > img,
+.module-gamesummary h3 > img {
+  height: 0.75em;
+  display: inline-block;
+}
+/* line 83, ../sass/tv2-gamesummary.scss */
+.module-gamesummary .article-figure {
+  margin-bottom: 0;
+}
+/* line 87, ../sass/tv2-gamesummary.scss */
+.module-gamesummary .event.plain {
+  padding-top: 0.15em;
+}
+/* line 93, ../sass/tv2-gamesummary.scss */
+.module-gamesummary button {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+/* line 96, ../sass/tv2-gamesummary.scss */
+.module-gamesummary button.active {
+  -webkit-transform: translate(2px, 2px);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+}
+/* line 106, ../sass/tv2-gamesummary.scss */
+.module-gamesummary .compact .event.plain {
+  padding-top: 0;
+}
+/* line 111, ../sass/tv2-gamesummary.scss */
+.module-gamesummary .compact span,
+.module-gamesummary .compact time {
+  font-size: 20px !important;
+}
+/* line 114, ../sass/tv2-gamesummary.scss */
+.module-gamesummary .compact .fb-share, .module-gamesummary .compact .eventimg, .module-gamesummary .compact .event figure, .module-gamesummary .compact .event p {
+  display: none;
+}
+/* line 119, ../sass/tv2-gamesummary.scss */
+.module-gamesummary .compact .multiple-events .c4 {
+  width: 100%;
+}
+/* line 124, ../sass/tv2-gamesummary.scss */
+.module-gamesummary .compact h3,
+.module-gamesummary .compact strong {
+  display: inline-block;
+  font-size: 20px !important;
+}
+/* line 130, ../sass/tv2-gamesummary.scss */
+.module-gamesummary .compact strong > img,
+.module-gamesummary .compact h3 > img {
+  padding-right: 15px;
+}
+/* line 134, ../sass/tv2-gamesummary.scss */
+.module-gamesummary .compact .event.plain {
+  padding-left: 35px;
+}
+/* line 143, ../sass/tv2-gamesummary.scss */
+.module-gamesummary.tiny figure.video, .module-gamesummary.narrow figure.video {
+  width: 100%;
+}
+/* line 146, ../sass/tv2-gamesummary.scss */
+.module-gamesummary.tiny .multiple-events .eventimg, .module-gamesummary.narrow .multiple-events .eventimg {
+  display: none;
+}
+/* line 149, ../sass/tv2-gamesummary.scss */
+.module-gamesummary.tiny .event.plain, .module-gamesummary.narrow .event.plain {
+  padding-top: 0em;
+}
+/* line 155, ../sass/tv2-gamesummary.scss */
+.module-gamesummary.tiny .eventimg {
+  display: none;
+}
+/* line 159, ../sass/tv2-gamesummary.scss */
+.module-gamesummary.tiny .c4 {
+  width: 100%;
+}
