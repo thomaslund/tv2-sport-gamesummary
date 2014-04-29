@@ -122,46 +122,50 @@
 .module-gamesummary .compact .fb-share, .module-gamesummary .compact .eventimg, .module-gamesummary .compact .event figure, .module-gamesummary .compact .event > p {
   display: none;
 }
-/* line 137, ../sass/tv2-gamesummary.scss */
+/* line 136, ../sass/tv2-gamesummary.scss */
+.module-gamesummary .compact li.show-video figure.video {
+  display: block;
+}
+/* line 141, ../sass/tv2-gamesummary.scss */
 .module-gamesummary .compact .multiple-events .c4 {
   width: 100%;
 }
-/* line 142, ../sass/tv2-gamesummary.scss */
+/* line 146, ../sass/tv2-gamesummary.scss */
 .module-gamesummary .compact figure {
   width: 50%;
 }
-/* line 147, ../sass/tv2-gamesummary.scss */
+/* line 151, ../sass/tv2-gamesummary.scss */
 .module-gamesummary .compact h3,
 .module-gamesummary .compact strong {
   display: inline-block;
   font-size: 20px !important;
 }
-/* line 153, ../sass/tv2-gamesummary.scss */
+/* line 157, ../sass/tv2-gamesummary.scss */
 .module-gamesummary .compact strong > img,
 .module-gamesummary .compact h3 > img {
   padding-right: 15px;
 }
-/* line 157, ../sass/tv2-gamesummary.scss */
+/* line 161, ../sass/tv2-gamesummary.scss */
 .module-gamesummary .compact .event.plain {
   padding-left: 35px;
 }
-/* line 166, ../sass/tv2-gamesummary.scss */
+/* line 170, ../sass/tv2-gamesummary.scss */
 .module-gamesummary.tiny figure.video, .module-gamesummary.narrow figure.video {
   width: 100%;
 }
-/* line 169, ../sass/tv2-gamesummary.scss */
+/* line 173, ../sass/tv2-gamesummary.scss */
 .module-gamesummary.tiny .multiple-events .eventimg, .module-gamesummary.narrow .multiple-events .eventimg {
   display: none;
 }
-/* line 172, ../sass/tv2-gamesummary.scss */
+/* line 176, ../sass/tv2-gamesummary.scss */
 .module-gamesummary.tiny .event.plain, .module-gamesummary.narrow .event.plain {
   padding-top: 0em;
 }
-/* line 178, ../sass/tv2-gamesummary.scss */
+/* line 182, ../sass/tv2-gamesummary.scss */
 .module-gamesummary.tiny .eventimg {
   display: none;
 }
-/* line 182, ../sass/tv2-gamesummary.scss */
+/* line 186, ../sass/tv2-gamesummary.scss */
 .module-gamesummary.tiny .c4 {
   width: 100%;
 }

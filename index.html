@@ -2,6 +2,9 @@
 <html lang="no">
 <head>
   <meta charset="utf-8">
+
+  <meta name="viewport" content="width=480">
+
   <title>Gamesummary - test</title>
   
   <link type="text/css" rel="stylesheet" href="http://static.cdn.tv2.no/s/stage_stylesheets/tv2bootstrap.css?v=1.1.30">
@@ -17,11 +20,13 @@
 
 <!-- start module markup --> 
 
-		 	<section class="sportsdata-widget module-gamesummary bg-white">
+		 	<section class="sportsdata-widget module-gamesummary">
 
 			 	<div style="padding: 15px;">
+			 		<!-- Høydepunktsknapp blir erstattet når design foreligger -->
 			 		<button style="float: right;" type="button">Vis høydepunkter</button>
 				</div>
+
 		 		<!-- toggle class compact -->
 			 	<ul class="">
 			 		<li>
@@ -40,7 +45,7 @@
 			 					<img src="img/icon-red_card.svg" alt="Rødt kort" title="Rødt kort">
 			 					Nicolaus Copernicus (Astronomers)
 			 				</strong>
-			 				<p>Feck! The Sun is the center of the universe, not the Earth.</p>
+			 				<p>The earth isn't the center of the universe.</p>
 			 			</div>
 			 		</li>
 
@@ -69,7 +74,7 @@
 
 
 			 				<div class="fb-share">
-			 				<!-- mock fb button -->
+			 				<!-- mock fb button / sjekk fbdevelopers for instruksjoner -->
 								<div data-href="https://developers.facebook.com/docs/plugins/" data-width="100%" data-type="button_count" class="fb-share-button fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=113869198637480&amp;href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;locale=nb_NO&amp;sdk=joey&amp;type=button_count"><span style="vertical-align: bottom; width: 81px; height: 20px;"><iframe name="f1a6f4509c" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:share_button Facebook Social Plugin" src="https://www.facebook.com/plugins/share_button.php?app_id=113869198637480&amp;channel=https%3A%2F%2Fs-static.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FdgdTycPTSRj.js%3Fversion%3D40%23cb%3Df325cf234c%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff2273b4b5c%26relation%3Dparent.parent&amp;href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;locale=nb_NO&amp;sdk=joey&amp;type=button_count" class="" style="border: none; visibility: visible; width: 81px; height: 20px;"></iframe></span></div>
 
 			 			<!-- /mock fb button	-->
@@ -115,7 +120,7 @@
 			 			</div>
 			 		</li>
 
-			 		<li class="highlight">
+			 		<li class="highlight"> <!-- highlighted event -->
 			 			<time class="t23 font-condensed" datetime="2014-12-23 19:07">67.</time>
 			 			<div class="event">
 
@@ -131,15 +136,36 @@
 			 				<p>(<strong>Assist:</strong> A. Nordenskiold)</p>
 			 			</div>
 			 		</li>
-
-			 		<li>
+			 		<!-- insert video class if event has video -->
+			 		<li class="video">
 			 			<time class="t23 font-condensed" datetime="2014-12-23 19:11">71.</time>
 			 			<div class="event">
+			 				<!-- video contentbox -->
+				 			<figure class="video article-figure">
+					        	<div id="AJzvLpdETV2_player_809704" class="tv2player media">
+						            <img src="http://www.cdn.tv2.no/tvid/VMan-P809/VMan-P809704">
+						            <p class="media-label">
+						           		<a href="#" style="font-size: 15.93191489361702px; height: 42.48510638297872px; padding: 5.31063829787234px 10.178723404255319px; line-height: 17.702127659574465px;">01:50</a>
+						            </p>
+						        </div>
+					    	</figure>
+					    	<!-- /video contentbox -->
 			 				<strong class="t23 font-extrabold">
 			 					<img src="img/icon-yellow_card.svg" alt="Gult kort" title="Gult kort">
-			 					Edwin Powell Hubble (Astronomers)
+			 					<!-- insert span with videotoggle if video is available -->
+			 					<span class="videotoggle">Edwin Powell Hubble (Astronomers)</span>
 			 				</strong>
 			 				<p>The universe seems to be expanding.</p>
+			 			</div>
+			 		</li>
+
+			 		<li>
+			 			<time class="t23 font-condensed" datetime="2014-12-23 19:20">80.</time>
+			 			<div class="event">
+			 				<strong class="t23 font-extrabold">
+			 					<img src="img/icon-yellow_card_double.svg" alt="To gule kort" title="To gule kort">
+			 					Francis Drake (Explorers)
+			 				</strong>
 			 			</div>
 			 		</li>
 
@@ -211,12 +237,14 @@
 			resizedw();
 
 
-			
+			//TODO: move to backbone events
 			//toggle compact class to show highlights
 			$('body').on('click', '.module-gamesummary button', function(){
 				$(this).toggleClass('active').parents('.module-gamesummary').find('ul').toggleClass('compact');
-			}).on('click', '.module-gamesummary .compact li.video', function(){
-				$(this).find('figure').show();
+			})
+			//toggle show-video class in compact view
+			.on('click', '.module-gamesummary .compact li.video h3, .module-gamesummary .compact li.video strong', function(){
+				$(this).parents('li.video').toggleClass('show-video');
 			});
 
 
