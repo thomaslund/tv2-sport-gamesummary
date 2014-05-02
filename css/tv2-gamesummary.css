@@ -45,7 +45,7 @@
 .module-gamesummary button.highlights-toggle span.switch {
   height: 1.5em;
   width: 3em;
-  background-image: url("../img/switch-on.svg");
+  background-image: url("../img/switch-off.svg");
   background-size: cover;
   position: absolute;
   top: 50%;
@@ -55,7 +55,7 @@
 }
 /* line 52, ../sass/tv2-gamesummary.scss */
 .module-gamesummary button.highlights-toggle.active span.switch {
-  background-image: url("../img/switch-off.svg");
+  background-image: url("../img/switch-on.svg");
 }
 /* line 56, ../sass/tv2-gamesummary.scss */
 .module-gamesummary button.highlights-toggle span.button-text {
