@@ -17,7 +17,49 @@
 	};
 }
 
+%transparent-border{
+    border-top: 1px solid rgba(0,0,0, 0.25);
+}
 .module-gamesummary{
+    button.highlights-toggle{
+        padding: 0 4em 0 0;
+        box-shadow: none;
+        background:transparent;
+        color: inherit;
+        font-weight: 400;
+        cursor: pointer;
+        position: relative;
+        font-size: 100%;
+        float: right;
+
+        &:hover{
+            -webkit-transform: translate(0px,0px);
+            transform: tranlsate(0px,0px);
+        }
+
+        span.switch{
+            height: 1.5em;
+            width: 3em;
+            background-image: url('../img/switch-on.svg');
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            right: 0.5em;
+            -webkit-transform: translateY(-50%);
+            transform: tranlsateY(-50%);
+        }
+
+        &.active span.switch{
+             background-image: url('../img/switch-off.svg');
+        }
+
+        span.button-text{
+            padding: 15px 0;
+            display: inline-block;
+        }
+        
+    }
+
     ul{
         padding: 0;
     }
@@ -28,24 +70,81 @@
     p{
         margin-bottom: 0.5em;
     }
-
     li{
         padding: 15px 0;
         width: 100%;
         display: table;
-        border-bottom: 1px solid rgba(0,0,0, 0.25);
-
-
-        &.highlight{
-            background-color: rgba(0,0,0,0.15);
-        }
-
+       @extend %transparent-border;
 
         .fb-share{
             @extend %clearfix;
 
         }
     }
+    
+    .highlight{
+        background-color: rgba(0,0,0,0.15);
+    }
+
+    table {
+        display: none;
+        tr{
+            @extend %transparent-border;
+
+            &.video-event{
+                cursor: pointer;
+                @extend %focus;
+            }
+             &.video-player {
+                display: none;
+                border-top: none;      
+                td{
+                  padding: 0 15px 15px 15px;    
+                }
+            }
+            &.show-video{
+                display: table-row;
+            }
+            
+            td{
+                padding: 15px 0;
+
+                &.time{
+                    text-align: right;
+                }
+                &.score{
+                    text-align: center;
+                    width:3.5em;
+                }
+                > div:first-child{
+                    padding-bottom: 15px;
+                }
+                
+                &.event-icon {
+                    padding: 17px 15px 0 0 ;
+                    width: 1.5em;
+                    text-align: center;
+
+                    img{
+                        height: 1em;
+                    }
+
+                }
+                &.multiple-events{
+                    img{
+                        margin-right: 15px;
+
+                    }
+                }
+
+                figure.video{
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    
     time, .multiple-events, li > .event{
         display: table-cell;
         vertical-align: top;
@@ -62,6 +161,7 @@
         width: 33%;
         float: left;
     }
+
     .eventimg{
         float: left;
         width: 120px;
@@ -86,81 +186,6 @@
 
     .event.plain{
        padding-top: 0.15em;
-    }
-
-
-    //temp togglebutton
-    button{
-        background-color:  rgba(0,0,0,0.25);
-    }
-    button.active{
-        -webkit-transform: translate(2px, 2px);
-        background-color: rgba(0,0,0,0.5);
-        box-shadow: none;
-    }
-
-
-    //compact view
-    .compact{
-
-        li.video{
-            cursor: pointer;
-        }
-
-        .videotoggle:before{
-            -webkit-font-smoothing: antialiased;
-            display: inline;
-            font-family: tv2-icons-story;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: normal;
-            height: auto;
-            speak: none;
-            text-transform: none;
-            width: auto;
-            content:'\e000';
-        }
-
-        .event.plain{
-           padding-top: 0;
-        }
-
-        span,
-        time{
-           font-size: 20px !important;
-        }
-        .fb-share,.eventimg, .event figure, .event > p{
-            display: none; 
-        }
-
-        li.show-video figure.video{
-            display: block;
-        }
-
-        .multiple-events{
-            .c4{
-                width: 100%;
-            }
-        }
-
-        figure{
-            width: 50%;
-        }
-
-        h3,
-        strong{
-            display: inline-block;
-            font-size: 20px !important;
-        }
-
-        strong > img,
-        h3 > img{
-            padding-right: 15px;
-        }
-
-        .event.plain{
-            padding-left: 35px;
-        }
     }
 
 

@@ -20,12 +20,10 @@
 
 <!-- start module markup --> 
 
-		 	<section class="sportsdata-widget module-gamesummary">
+		 	<section class="sportsdata-widget module-gamesummary bg-blue-medium">
 
-			 	<div style="padding: 15px;">
-			 		<!-- Høydepunktsknapp blir erstattet når design foreligger -->
-			 		<button style="float: right;" type="button">Vis høydepunkter</button>
-				</div>
+		 		<button class="highlights-toggle" type="button"><span class="button-text">Kun høydepunkter</span> <span class="switch" src="img/switch-on.svg"></span></button>
+
 
 		 		<!-- toggle class compact -->
 			 	<ul class="">
@@ -65,10 +63,13 @@
 					    	<!-- /video contentbox -->
 
 			 				<h3 class="font-extrabold t40">
-					    		<img src="img/icon-goal.svg" alt="Mål" title="Mål">
-					    		<span class="videotoggle">Mål: 1-0</span>
+			 					 <img src="img/icon-goal.svg" alt="Mål" title="Mål">
+					    		 <span class="score">1-0</span>
 					    	</h3>
-			 				<strong class="t23 font-extrabold">Galileo Galilei (Astronomers)</strong>
+
+			 				<strong class="t23 font-extrabold">
+			 					Galileo Galilei (Astronomers)
+			 				</strong>
 			 				<p>We haz science!</p>
 			 				<p>(<strong>Assist:</strong> The pope)</p>
 
@@ -128,7 +129,7 @@
 
 			 				<h3 class="font-extrabold t40">
 					    		<img src="img/icon-goal.svg" alt="Mål" title="Mål">
-					    		Mål: 1-1
+					    		<span class="score">1-1</span>
 					    	</h3>
 			 				<strong class="t23 font-extrabold">Fritjof Nansen (Explorers)</strong>
 			 				<div class="team"></div>
@@ -153,7 +154,7 @@
 			 				<strong class="t23 font-extrabold">
 			 					<img src="img/icon-yellow_card.svg" alt="Gult kort" title="Gult kort">
 			 					<!-- insert span with videotoggle if video is available -->
-			 					<span class="videotoggle">Edwin Powell Hubble (Astronomers)</span>
+			 					Edwin Powell Hubble (Astronomers)
 			 				</strong>
 			 				<p>The universe seems to be expanding.</p>
 			 			</div>
@@ -170,6 +171,168 @@
 			 		</li>
 
 			 	</ul>
+
+
+			 	<table>
+				 	<tbody>
+				 		<tr>
+				 			<td class="font-condensed time">
+			 					1.
+				 			</td>
+				 			<td class="font-condensed score">
+
+				 			</td>
+				 			<td class="event-icon">
+				 				
+				 			</td>
+				 			<td>
+					 			Start: Kampen er i gang
+				 			</td>
+				 		</tr>
+				 		<tr>
+				 			<td class="font-condensed time">
+			 					23.
+				 			</td>
+				 			<td class="font-condensed score">
+				 				
+				 			</td>
+				 			<td class="event-icon">
+				 				<img src="img/icon-red_card.svg" alt="Rødt kort" title="Rødt kort">		
+				 			</td>
+				 			<td>
+					 			Nicolaus Copernicus (Astronomers)
+				 			</td>
+				 		</tr>
+				 		<tr class="video-event highlight" tabindex="0"> <!-- js needed for keyboard 'keyup' 32 event -->
+				 			<td class="font-condensed time">
+			 					43.
+				 			</td>
+				 			<td class="score">
+				 				<strong class="font-extrabold">1-0</strong>
+				 			</td>
+				 			<td class="event-icon">
+				 				<img src="img/icon-goal.svg" alt="Mål" title="Mål">
+				 			</td>
+				 			<td>
+					 			<strong class="icon-play font-extrabold">Mål:</strong> 
+					 			Galileo Galilei (Astronomers)
+				 			</td>
+				 		</tr>
+				 		<tr class="video-player">
+				 			<td colspan="4">
+				 				<!-- video contentbox -->
+					 			<figure class="video article-figure">
+						        	<div id="AJzvLpdETV2_player_809704" class="tv2player media">
+							            <img src="http://www.cdn.tv2.no/tvid/VMan-P809/VMan-P809704">
+							            <p class="media-label">
+							           		<a href="#" style="font-size: 15.93191489361702px; height: 42.48510638297872px; padding: 5.31063829787234px 10.178723404255319px; line-height: 17.702127659574465px;">01:50</a>
+							            </p>
+							        </div>
+						    	</figure>
+						    	<!-- /video contentbox -->
+				 			</td>
+				 		</tr>
+				 		<tr>
+				 			<td class="font-condensed time">
+			 					45.
+				 			</td>
+				 			<td class="font-condensed score">
+
+				 			</td>
+				 			<td class="event-icon">
+				 				
+				 			</td>
+				 			<td>
+					 			Pause: Vi venter på andre omgang
+				 			</td>
+				 		</tr>
+				 		<tr>
+				 			<td class="font-condensed time">
+			 					63.
+				 			</td>
+				 			<td class="font-condensed score">
+				 				
+				 			</td>
+				 			<td class="multiple-events" colspan="2"> <!-- multiple events gets colspan 2-->
+				 				<div>
+				 					<img src="img/icon-player_out.svg" alt="Spiller ut" title="Spiller ut">
+				 					<span>Captain Robert Scott (Explorers)</span>
+				 				</div>
+				 				<div>
+					 				<img src="img/icon-player_in.svg" alt="Spiller inn" title="Spiller inn">
+					 				<span>Marco Polo (Explorers)</span>
+				 				</div>
+				 			</td>
+				 		</tr>
+
+				 		<tr class="highlight"> <!-- Video not ready yet -->
+				 			<td class="font-condensed time">
+			 					67.
+				 			</td>
+				 			<td class="score">
+				 				<strong class="font-extrabold">1-1</strong>
+				 			</td>
+				 			<td class="event-icon">
+				 				<img src="img/icon-goal.svg" alt="Mål" title="Mål">
+				 			</td>
+				 			<td>
+					 			
+					 			Fritjof Nansen (Explorers)
+				 			</td>
+				 		</tr>
+
+				 		<tr class="video-event" tabindex="0"> <!-- js needed for keyboard 'keyup' 32 event -->
+				 			<td class="font-condensed time">
+			 					71.
+				 			</td>
+				 			<td class="score">
+				 			
+				 			</td>
+				 			<td class="event-icon">
+				 				<img src="img/icon-yellow_card.svg" alt="Gult kort" title="Gult kort">
+				 			</td>
+				 			<td>
+					 			<strong class="icon-play font-extrabold">Gult kort:</strong> 
+					 			Edwin Powell Hubble (Astronomers)
+				 			</td>
+				 		</tr>
+				 		<!-- video inserts new row -->
+				 		<tr class="video-player">
+				 			<td colspan="4">
+				 				<!-- video contentbox -->
+					 			<figure class="video article-figure">
+						        	<div id="AJzvLpdETV2_player_809704" class="tv2player media">
+							            <img src="http://www.cdn.tv2.no/tvid/VMan-P809/VMan-P809704">
+							            <p class="media-label">
+							           		<a href="#" style="font-size: 15.93191489361702px; height: 42.48510638297872px; padding: 5.31063829787234px 10.178723404255319px; line-height: 17.702127659574465px;">01:50</a>
+							            </p>
+							        </div>
+						    	</figure>
+						    	<!-- /video contentbox -->
+				 			</td>
+				 		</tr>
+
+
+				 		<tr>
+				 			<td class="font-condensed time">
+			 					80.
+				 			</td>
+				 			<td class="font-condensed score">
+				 				
+				 			</td>
+				 			<td class="event-icon">
+				 				<img src="img/icon-yellow_card_double.svg" alt="Rødt kort" title="Rødt kort">		
+				 			</td>
+				 			<td>
+					 			Francis Drake (Explorers)
+				 			</td>
+				 		</tr>
+
+				 	</tbody>
+			 	</table>
+
+
+
 
 		  	</section>
 
@@ -239,12 +402,19 @@
 
 			//TODO: move to backbone events
 			//toggle compact class to show highlights
-			$('body').on('click', '.module-gamesummary button', function(){
-				$(this).toggleClass('active').parents('.module-gamesummary').find('ul').toggleClass('compact');
+			$('body')
+			.on('click', '.module-gamesummary button', function(){
+				$(this).toggleClass('active').parents('.module-gamesummary').find('ul').toggle().siblings('table').toggle();
 			})
 			//toggle show-video class in compact view
-			.on('click', '.module-gamesummary .compact li.video h3, .module-gamesummary .compact li.video strong', function(){
-				$(this).parents('li.video').toggleClass('show-video');
+			.on('click', '.module-gamesummary tr.video-event', function(){
+				$(this).next().toggleClass('show-video');
+			})
+			.on('keyup', '.module-gamesummary tr.video-event', function(e){
+				if(e.keyCode === 32){
+					$(this).next().toggleClass('show-video');
+				}
+
 			});
 
 
