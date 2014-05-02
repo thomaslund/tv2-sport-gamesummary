@@ -22,7 +22,7 @@
 }
 .module-gamesummary{
     button.highlights-toggle{
-        padding: 0 4em 0 0;
+        padding: 0 4em 0 15px;
         box-shadow: none;
         background:transparent;
         color: inherit;
@@ -31,6 +31,7 @@
         position: relative;
         font-size: 100%;
         float: right;
+        @extend %focus;
 
         &:hover{
             -webkit-transform: translate(0px,0px);
